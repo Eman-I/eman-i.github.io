@@ -1,0 +1,245 @@
+/* Student Name: Eman Ibrahim */
+/* Assignment: Assignment 1 */
+/* Section: 311 */
+/* Description: This is the cascading style sheet for all HTML files of Assignment 1 */
+
+/* Import font-family*/
+@import url(https://fonts.google.com/specimen/Protest+Riot);
+
+/* Use universal selector to apply common styling */
+*{
+    font-family: 'Protest Riot' , cursive ;
+    background-color:rgb(255, 194, 255);
+    color: black;   
+}
+div, form{
+    background-color: rgb(255, 194, 255);
+    margin: 5%;
+}
+div{
+    
+    padding-bottom: 3%;
+    border-bottom: dotted 5px rgb(64, 15, 88);
+}
+p, li, label{
+    font-size: 14pt;
+}
+strong{
+    font-weight:bolder;
+}
+
+/* Styling header and footer for all pages the same*/
+/* Use flex display to efficiently control the elements inside header and footer*/
+header,footer{
+    background-color: rgb(64, 15, 88) ;
+    border: double 10px white;
+   border-radius: 10px;
+    margin: 1%;
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+} 
+h1, h5, nav, nav a {
+    background-color: rgb(64, 15, 88) ;
+    color: white;   
+}
+h1, nav{
+    padding-bottom: 3%;
+}
+
+/* Use grid display for both nav sections */
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20%;
+    column-gap: 7%;
+}
+
+/* Specify the position of the fifth and sixth anchor elements in the header*/
+.ah5{
+    grid-column: 2;
+}
+.ah6{
+    grid-column: 3;
+}
+
+/* Formatting anchor elements*/
+a{
+    border-radius: 10px;
+    border: dashed 3px rgb(255, 194, 255);
+    padding: 2% 0%;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* An anchor element in the home(index) page that needs special formatting*/
+#ahome{
+    padding: 0%;
+    border: 0px
+}
+h5{
+    font-size: 1em;
+    margin-top: 0%;
+}
+
+/* first section in index page set to grid display */
+/*to have a resposive position for the photo*/
+#div11{
+    display: grid;
+    align-items: center;
+    column-gap: 5%;   
+    
+}
+#myphoto{
+    grid-column:2;
+    grid-row: 2;
+    width:90%;
+    height: 40vh;
+    border-radius: 50%;
+    margin: 0% 50% 0% 0%;
+    border:  solid 10px rgb(64, 15, 88);
+    
+}
+#div11 > h2,p{
+    grid-column:1;
+}
+
+
+/* Add some special formatting to some elements in the resume page*/
+.resumeli{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.insideli{
+    margin-left: 3%;
+    margin-top: 0%;
+    list-style-type: "- ";  
+}
+.h3resume{
+    display: inline;
+   
+}
+.h3resume2{
+    margin: 0%;
+}
+li > em {
+    margin-left: 70px;  
+    font-weight: bold;  
+}
+
+/* Courses page special formatting*/
+
+.coursesh2{
+    width: fit-content;
+    border: solid 5px rgb(64, 15, 88);
+    border-radius: 10px;
+    margin: 5% auto 0% auto;
+    padding: 1% 1%;
+    text-align: center;
+}
+.courses {
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto ;
+    align-items:flex-start;
+    border: solid 5px rgb(64, 15, 88);
+    border-radius: 10px;
+    margin-top: 2%;
+}
+.courses12, .courses22, .courses32,
+.courses42, .courses52, .courses62{
+    border-left: dotted 5px rgb(64, 15, 88) ;
+    border-bottom: none;
+    height: 94%;
+} 
+.courses11, .courses21, .courses31,
+.courses41, .courses51, .courses61{
+    border-right: dotted 5px rgb(64, 15, 88) ;
+    height: 94%;
+    padding-right: 3%;
+    border-bottom: none;
+} 
+
+.courseimg{
+    width: 40%;
+    min-width: 150px;
+    max-width: 180px;
+    height: 30vh ;
+    border: dashed rgb(64, 15, 88);
+    border-radius: 5px;
+    margin:  2% 30% 4% 30%;
+}
+div> h3{
+    text-align: center;
+}
+.pcourse{
+    margin: 0%;
+}
+
+
+/* Contact page special formatting*/
+label{
+    text-align: center;
+}
+#fieldset1{
+    display: grid;
+    grid-template-rows: repeat(2, auto) ;
+    grid-template-columns: repeat(6, auto) ;
+    row-gap: 25%;
+    padding: 1% 3% 7% 3%;
+}
+#fNameLabel, #emailLabel{
+    grid-column: 1;
+    align-self:center;
+}
+#fName, #email{
+    grid-column: 2/4;
+}
+#lNameLabel{
+    grid-column: 4;
+    padding-left: 10%;
+    padding-right: 1%;
+}
+#lName{
+    grid-column: 5/7;
+}
+input{
+    height: 5vh;
+    max-height: 65%;
+    min-height: 55%;
+    width:30vw;
+}
+#fieldset2{
+    display: grid;
+    grid-template-rows: repeat(6, auto) ;
+    grid-template-columns: repeat(2, auto) ;
+    row-gap: 25%;
+    padding: 1% 3% 15% 3%;   
+}
+#subject{
+    justify-self: center;
+}
+#message{
+    grid-column: 2;
+    grid-row: 2/7;
+}
+button{
+    height: 10%;
+    width: 10%;
+    margin: 5% 0%;
+    padding: 0.5%;
+    position: relative;
+    left: 45%;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: rgb(64, 15, 88);
+    color:white
+}
+
